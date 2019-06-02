@@ -1,0 +1,12 @@
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.gridItem {
+    width: 300px;
+    background-color: bisque;
+    margin: 5px;
+    padding: 10px
+}
