@@ -1,5 +1,5 @@
 import React from 'react';
-import './Grid.css';
+import './GridItem.css';
 
 const GridItem = (props) => {
     return (

@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './Header/Header';
-import GridNews from './News/GridNews';
-import AddNews from './AddNews/AddNews';
-
 import './App.css';
+
+import Header from '../Header';
+import GridNews from '../GridNews';
+import AddNews from '../AddNews';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Header/>
       <GridNews/>
       <AddNews/>
