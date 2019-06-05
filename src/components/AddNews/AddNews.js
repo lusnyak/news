@@ -1,7 +1,8 @@
 import React from 'react';
 import './AddNews.css';
 
-const AddNews = ()=> {
+const AddNews = (props) => {
+    
     return (
         <div className="container">
             <h1>Add News</h1>
