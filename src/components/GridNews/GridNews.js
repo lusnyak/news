@@ -1,21 +1,32 @@
-import React from 'react';
-import GridItem from '../GridItem';
+import React, {Component} from 'react';
 import './GridNews.css';
+import Grid from '../Grid';
 
-const GridNews = (props) => {
-    var items = props.data.map((d)=> {
-        console.log(d)
-        return <GridItem item={d} key ={d.id}/>
-    })
-    
-    return (
-        <div className='container'>
-            <h1>News</h1>
-             <div className='grid'>
-                 {items}
-             </div>
-        </div>
-    )
+export default class GridNews extends Component {
+    renderItem = ({title, description, type, id}) => {
+        let containerStyle = type === 'Hot' ? "gridHotItem" : "gridItem"
+        return (
+            <div className={containerStyle} key={id}> 
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <div>
+                    <button>Hot</button>
+                    <button>Standard</button>
+                </div>
+            </div>
+        )
+    }
+
+    render(){
+        return (
+            <div className='container'>
+                <h1>News</h1>
+                <Grid
+                    item={this.renderItem}
+                    data={this.props.data}
+                />
+            </div>
+        )
+    }
 }
 
-export default GridNews;

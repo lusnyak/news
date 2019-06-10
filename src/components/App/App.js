@@ -22,15 +22,17 @@ export default class App extends Component {
 
   filterAction = (type) => {
     let fData = []
-    if (type != 'All') {
+    if (type !== 'All') {
       fData = this.state.data.filter((el)=>{
-        return el.type == type
+        return el.type === type
       })
     } else {
       fData = this.state.data
     }
 
-    this.setState({filtredData:fData})
+    this.setState(()=>{
+      return {filtredData: fData}
+    })
   }
   
   render() {

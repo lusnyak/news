@@ -1,5 +1,13 @@
-.grid {
-    display: flex;
-    flex-wrap: wrap;    
+.gridItem {
+    width: 300px;
+    background-color: bisque;
+    margin: 5px;
+    padding: 10px
 }
 
+.gridHotItem {
+    width: 300px;
+    background-color: red;
+    margin: 5px;
+    padding: 10px
+}
